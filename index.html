@@ -114,9 +114,9 @@
                     <i class="ph-bold ph-globe"></i> <span id="lang-text">ES</span>
                 </button>
                 
-                <a href="https://wa.me/593990553571" class="bg-alice-choco hover:bg-[#3E2723] text-white px-5 py-2 rounded-full font-bold shadow-lg transition-all flex items-center gap-2 text-sm">
-                    <i class="ph-bold ph-whatsapp-logo"></i> 
-                    <span class="lang" data-es="Ordenar" data-en="Order Now">Ordenar</span>
+                <a href="#menu" class="bg-alice-choco hover:bg-[#3E2723] text-white px-5 py-2 rounded-full font-bold shadow-lg transition-all flex items-center gap-2 text-sm">
+                    <i class="ph-bold ph-fork-knife"></i> 
+                    <span class="lang" data-es="Menú" data-en="Menu">Menú</span>
                 </a>
             </div>
         </div>
@@ -193,7 +193,7 @@
                             </div>
                             
                             <div class="mt-4 pt-2 text-center">
-                                <a href="https://maps.google.com/?q=Alice+Cake+La+Concordia+Ecuador" target="_blank" class="text-xs font-bold text-alice-choco hover:text-alice-red flex items-center justify-center gap-1 uppercase tracking-widest transition-colors">
+                                <a href="https://maps.app.goo.gl/AGPqKjhwGeW3mLmx5" target="_blank" class="text-xs font-bold text-alice-choco hover:text-alice-red flex items-center justify-center gap-1 uppercase tracking-widest transition-colors">
                                     <i class="ph-fill ph-map-pin"></i> La Concordia, Ecuador
                                 </a>
                             </div>
@@ -287,15 +287,24 @@
                 <p class="text-alice-cream/70 mb-6 font-light">+593 99 055 3571</p>
                 
                 <div class="flex gap-4 justify-center md:justify-start">
-                    <a href="https://wa.me/593990553571" class="bg-alice-cream hover:bg-white text-alice-choco px-6 py-2 rounded-full font-bold transition-all shadow-lg text-sm">
-                        <i class="ph-bold ph-whatsapp-logo"></i> WhatsApp
+                    <a href="https://maps.app.goo.gl/AGPqKjhwGeW3mLmx5" target="_blank" class="bg-alice-cream hover:bg-white text-alice-choco px-6 py-2 rounded-full font-bold transition-all shadow-lg text-sm">
+                        <i class="ph-bold ph-map-pin"></i> Cómo Llegar
                     </a>
                 </div>
             </div>
 
-            <!-- Mapa Estático -->
-            <div class="rounded-xl overflow-hidden h-48 border-4 border-alice-cream/20 relative group shadow-2xl">
-                 <iframe src="https://maps.app.goo.gl/k25Jay9TU2w25Hgf6ZG9y!5e0!3m2!1ses!2sus!4v1620000000000!5m2!1ses!2sus" width="100%" height="100%" style="border:0; filter: contrast(0.9);" allowfullscreen="" loading="lazy"></iframe>
+            <!-- Mapa Estático Mejorado -->
+            <div class="rounded-xl overflow-hidden h-64 border-4 border-alice-cream/20 relative group shadow-2xl z-20">
+                <!-- Usamos el embed general de Maps para La Concordia + Alice Cake para máxima compatibilidad -->
+                 <iframe 
+                    src="https://maps.google.com/maps?q=Alice+Cake+La+Concordia+Ecuador&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0; filter: contrast(0.9);" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                 </iframe>
             </div>
 
         </div>
@@ -353,8 +362,6 @@
         }
 
         // 3. LOGICA HORARIOS (ESPECÍFICA ALICE CAKE)
-        // Martes a Sábado: 14:00 - 19:00
-        // Domingo y Lunes: Cerrado
         function checkStatus() {
             try {
                 // Zona Horaria Ecuador: GMT-5 (America/Guayaquil)
